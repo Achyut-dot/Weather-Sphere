@@ -1,0 +1,64 @@
+<div class="current-weather-container" *ngIf="!isLoading && !error && (weather$ | async) as weather"
+    [weatherCondition]="weather.conditions" [isDay]="isDay" appWeatherAnimation>
+
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="current-weather-content">
+                <div class="weather-primary-info">
+                    <h2 class="location-name">{{ cityName || weather.city }}, {{ weather.country }}</h2>
+                    <div class="weather-main">
+                        <div class="temperature-display">
+                            <span class="current-temperature">{{ weather.temperature | temperature }}</span>
+                            <span class="feels-like">Feels like {{ weather.feelsLike | temperature }}</span>
+                        </div>
+                        <div class="weather-icon-container">
+                            <app-weather-icon [iconCode]="weather.icon" size="large"></app-weather-icon>
+                            <div class="weather-condition">{{ weather.description | titlecase }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <i class="bi bi-droplet-fill"></i>
+                        <span class="detail-label">Humidity</span>
+                        <span class="detail-value">{{ weather.humidity }}%</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-wind"></i>
+                        <span class="detail-label">Wind</span>
+                        <span class="detail-value">{{ weather.windSpeed }} m/s</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-speedometer2"></i>
+                        <span class="detail-label">Pressure</span>
+                        <span class="detail-value">{{ weather.pressure }} hPa</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-eye-fill"></i>
+                        <span class="detail-label">Visibility</span>
+                        <span class="detail-value">{{ weather.visibility / 1000 }} km</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-sunrise-fill"></i>
+                        <span class="detail-label">Sunrise</span>
+                        <span class="detail-value">{{ weather.sunrise * 1000 | dateFormat: 'time' }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-sunset-fill"></i>
+                        <span class="detail-label">Sunset</span>
+                        <span class="detail-value">{{ weather.sunset * 1000 | dateFormat: 'time' }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isLoading" class="d-flex justify-content-center my-5">
+    <app-loader text="Loading weather data..."></app-loader>
+</div>
+
+<div *ngIf="error" class="d-flex justify-content-center my-5">
+    <app-error-message [message]="error"></app-error-message>
+</div>
