@@ -1,0 +1,75 @@
+// Colors
+$primary-color: #3498db;
+$secondary-color: #2980b9;
+$success-color: #2ecc71;
+$warning-color: #f39c12;
+$danger-color: #e74c3c;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Theme colors
+$theme-clear-day-bg: linear-gradient(180deg, #64b5f6 0%, #1976d2 100%);
+$theme-clear-night-bg: linear-gradient(180deg, #283593 0%, #1a237e 100%);
+$theme-clouds-day-bg: linear-gradient(180deg, #90a4ae 0%, #546e7a 100%);
+$theme-clouds-night-bg: linear-gradient(180deg, #455a64 0%, #263238 100%);
+$theme-rain-day-bg: linear-gradient(180deg, #78909c 0%, #455a64 100%);
+$theme-rain-night-bg: linear-gradient(180deg, #37474f 0%, #263238 100%);
+$theme-snow-day-bg: linear-gradient(180deg, #cfd8dc 0%, #b0bec5 100%);
+$theme-snow-night-bg: linear-gradient(180deg, #607d8b 0%, #455a64 100%);
+$theme-thunderstorm-bg: linear-gradient(180deg, #263238 0%, #1a237e 100%);
+$theme-mist-day-bg: linear-gradient(180deg, #b0bec5 0%, #78909c 100%);
+$theme-mist-night-bg: linear-gradient(180deg, #546e7a 0%, #37474f 100%);
+
+// Typography
+$font-family-base: 'Montserrat',
+sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Spacing
+$spacer: 1rem;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Container max-widths
+$container-max-width-sm: 540px;
+$container-max-width-md: 720px;
+$container-max-width-lg: 960px;
+$container-max-width-xl: 1140px;
+
+// Z-index values
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Shadows
+$box-shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+
+// Borders
+$border-width: 1px;
+$border-color: $gray-300;
+$border-radius: .25rem;
+$border-radius-lg: .3rem;
+$border-radius-sm: .2rem;

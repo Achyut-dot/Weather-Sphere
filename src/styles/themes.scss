@@ -1,0 +1,114 @@
+.theme-clear-day {
+    background: $theme-clear-day-bg;
+    color: $dark-color;
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.theme-clear-night {
+    background: $theme-clear-night-bg;
+    color: $light-color;
+
+    .card {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: $light-color;
+    }
+}
+
+.theme-clouds-day {
+    background: $theme-clouds-day-bg;
+    color: $dark-color;
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.theme-clouds-night {
+    background: $theme-clouds-night-bg;
+    color: $light-color;
+
+    .card {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: $light-color;
+    }
+}
+
+.theme-rain-day {
+    background: $theme-rain-day-bg;
+    color: $dark-color;
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.theme-rain-night {
+    background: $theme-rain-night-bg;
+    color: $light-color;
+
+    .card {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: $light-color;
+    }
+}
+
+.theme-snow-day {
+    background: $theme-snow-day-bg;
+    color: $dark-color;
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.theme-snow-night {
+    background: $theme-snow-night-bg;
+    color: $light-color;
+
+    .card {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: $light-color;
+    }
+}
+
+.theme-thunderstorm {
+    background: $theme-thunderstorm-bg;
+    color: $light-color;
+
+    .card {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: $light-color;
+    }
+}
+
+.theme-mist-day {
+    background: $theme-mist-day-bg;
+    color: $dark-color;
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.theme-mist-night {
+    background: $theme-mist-night-bg;
+    color: $light-color;
+
+    .card {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: $light-color;
+    }
+}
+
+.theme-default {
+    background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
+    color: $light-color;
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.85);
+        color: $dark-color;
+    }
+}
