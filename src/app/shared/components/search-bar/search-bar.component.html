@@ -1,0 +1,25 @@
+<div class="search-container">
+    <form (ngSubmit)="onSearchSubmit()">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search city..." [formControl]="searchControl"
+                (focus)="onFocus()" (blur)="onBlur()">
+            <button class="btn btn-primary" type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+    </form>
+
+    <div class="suggestions-container" *ngIf="showSuggestions">
+        <div class="suggestions-loader" *ngIf="isLoading">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <ul class="suggestions-list" *ngIf="!(isLoading) && (suggestions$ | async) as suggestions">
+            <li *ngIf="suggestions.length === 0" class="suggestion-item no-results">No cities found</li>
+            <li *ngFor="let city of suggestions" class="suggestion-item" (click)="onSuggestionClick(city)">
+                {{ getFormattedCityName(city) }}
+            </li>
+        </ul>
+    </div>
+</div>
