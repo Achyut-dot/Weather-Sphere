@@ -1,0 +1,36 @@
+<div class="forecast-container" *ngIf="!isLoading && !error && (forecast$ | async) as forecast">
+    <h2 class="forecast-title">5-Day Forecast</h2>
+
+    <div class="forecast-cards-container">
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <div class="col" *ngFor="let day of forecast">
+                <div class="card h-100 forecast-card">
+                    <div class="card-body text-center">
+                        <h3 class="day-name">{{ day.day }}</h3>
+                        <p class="date-display">{{ day.date | date:'MMM d' }}</p>
+
+                        <div class="forecast-icon">
+                            <app-weather-icon [iconCode]="day.icon" size="medium"></app-weather-icon>
+                        </div>
+
+                        <p class="weather-description">{{ day.description | titlecase }}</p>
+
+                        <div class="temp-range">
+                            <span class="max-temp">{{ day.maxTemp | temperature }}</span>
+                            <span class="temp-separator">/</span>
+                            <span class="min-temp">{{ day.minTemp | temperature }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isLoading" class="d-flex justify-content-center my-5">
+    <app-loader text="Loading forecast..."></app-loader>
+</div>
+
+<div *ngIf="error" class="d-flex justify-content-center my-5">
+    <app-error-message [message]="error"></app-error-message>
+</div>
